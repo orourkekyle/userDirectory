@@ -30,19 +30,19 @@ class UserContainer extends Component {
                 <Table striped bordered hover>
                     <thead>
                         <tr>
-                            <th>#</th>
+                            <th>Image</th>
                             <th>First Name</th>
                             <th>Last Name</th>
-                            <th>Username</th>
+                            <th>Email</th>
                         </tr>
                     </thead>
                     <tbody>
                         {this.state.result.map((user, index) => (
                             <tr key={index}>
+                                <td><img src={user.picture.thumbnail} /></td>
                                 <td>{user.name.first}</td>
                                 <td>{user.name.last}</td>
-                                <td>{}</td>
-                                <td>{}</td>
+                                <td>{user.email}</td>
                             </tr>
                         ))}
                     </tbody>
